@@ -64,12 +64,26 @@ app.post("/api/generate-lyrics", async (req, res) => {
     });
 
     return res.json({ lyrics: response.text || "" });
+  
   } catch (error) {
-    console.error("Lyrics generation error:", error.message);
-    return res.status(500).json({
-      error: "Lyrics generation failed. Check server configuration."
+    console.error("Lyrics generation error:", {
+      message: error.message,
+      status: error.status,
+      code: error.code
+    });
+
+    const isBusy =
+      error.status === 503 ||
+      error.code === 503 ||
+      error.status === "UNAVAILABLE";
+
+    return res.status(isBusy ? 503 : 500).json({
+      error: isBusy
+        ? "Gemini is temporarily busy. Please try again shortly."
+        : "Lyrics generation failed. Please check the server logs and try again."
     });
   }
+
 });
 
 app.listen(PORT, "0.0.0.0", () => {
