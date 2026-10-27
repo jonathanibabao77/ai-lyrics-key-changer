@@ -1,0 +1,28 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b00ff"/>
+      <stop offset="100%" stop-color="#0057ff"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff38e8"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <circle cx="256" cy="205" r="145" fill="#10104f" stroke="url(#wave)" stroke-width="12"/>
+  <g fill="url(#wave)">
+    <rect x="85" y="190" width="18" height="64" rx="9"/>
+    <rect x="112" y="160" width="18" height="124" rx="9"/>
+    <rect x="139" y="180" width="18" height="84" rx="9"/>
+    <rect x="355" y="180" width="18" height="84" rx="9"/>
+    <rect x="382" y="160" width="18" height="124" rx="9"/>
+    <rect x="409" y="190" width="18" height="64" rx="9"/>
+  </g>
+  <path d="M242 105v166a38 38 0 1 1-22-35V145l100-25v126a38 38 0 1 1-22-35V92z" fill="#fff"/>
+  <rect x="300" y="255" width="74" height="66" rx="16" fill="#17145c" stroke="url(#wave)" stroke-width="7"/>
+  <text x="337" y="299" text-anchor="middle" font-family="Arial,sans-serif" font-size="35" font-weight="bold" fill="#fff">AI</text>
+  <text x="256" y="405" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#fff">AI Lyrics</text>
+  <text x="256" y="451" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#fff">&amp; Key Changer</text>
+</svg>
